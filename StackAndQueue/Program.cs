@@ -5,8 +5,9 @@ internal class Program
     static void Main(string[] args)
     {
         Console.WriteLine("Welcome to Data Structure - Stack And Queue");
-        Console.WriteLine("\n1.Create Stack \n2.Peek And Pop");
+        Console.WriteLine("\n1.Create Stack \n2.Peek And Pop \n3.Create Queue");
         LinkedListStack stack = new LinkedListStack();
+        LinkedListQueue queue = new LinkedListQueue();
         int option = Convert.ToInt32(Console.ReadLine());
         switch (option)
         {
@@ -28,7 +29,16 @@ internal class Program
                 stack.IsEmpty();
                 stack.Display();
                 break;
+            case 3:
+                Console.WriteLine("Create a Queue using Linked List");
+                queue.Enqueue(56);
+                queue.Enqueue(30);
+                queue.Enqueue(70);
+                queue.Display();
+                break;
+            default:
+                Console.WriteLine("Please enter the correct option");
+                break;
         }
-        
     }
 }
