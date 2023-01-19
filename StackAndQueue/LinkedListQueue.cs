@@ -19,12 +19,22 @@ namespace StackAndQueue
 					temp = temp.next;
 				}
 				temp.next = node;
-				node.next = head;
 			}
 			Console.WriteLine("{0} inserted into queue ",node.data);
 		}
-		//display from queue
-		internal void Display()
+		//creating dequeue to remove front item from queue
+        internal void Dequeue()
+        {
+            if (this.head == null)
+            {
+                Console.WriteLine("Queue is empty");
+            }
+			Node temp = this.head;
+			this.head = this.head.next;
+            Console.WriteLine("{0} removed in queue ", temp.data);
+        }
+        //display from queue
+        internal void Display()
 		{
 			Node temp = this.head;
 			if (temp == null)

@@ -5,7 +5,7 @@ internal class Program
     static void Main(string[] args)
     {
         Console.WriteLine("Welcome to Data Structure - Stack And Queue");
-        Console.WriteLine("\n1.Create Stack \n2.Peek And Pop \n3.Create Queue");
+        Console.WriteLine("\n1.Create Stack \n2.Peek And Pop \n3.Create Queue \n4.Dequeue");
         LinkedListStack stack = new LinkedListStack();
         LinkedListQueue queue = new LinkedListQueue();
         int option = Convert.ToInt32(Console.ReadLine());
@@ -34,6 +34,15 @@ internal class Program
                 queue.Enqueue(56);
                 queue.Enqueue(30);
                 queue.Enqueue(70);
+                queue.Display();
+                break;
+            case 4:
+                Console.WriteLine("Dequeue from begining of queue");
+                queue.Enqueue(56);
+                queue.Enqueue(30);
+                queue.Enqueue(70);
+                queue.Dequeue();
+                queue.Dequeue();
                 queue.Display();
                 break;
             default:
